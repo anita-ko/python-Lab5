@@ -1,7 +1,7 @@
 # Add comments before you do anything else.
 #!/usr/bin/env python3
-# Author:
-# Date:
+# Author: Anita Ko
+# Date: oct 19, 2026
 # Purpose: Write data to a file.
 # Usage: ./lab5b.py
 
@@ -9,3 +9,18 @@
 # TO DO 2: Run the script.
 # TO DO 3: Run the 'ls' command.
 # TO DO 4: Print the contents of fruits.txt in a loop.
+
+f = open('fruits.txt', 'w')
+f.write('1. Apples are crunchy.\n2. Oranges are sweet, sour and juicy.\n3. Strawberries are sweet.\n4. Which fruit do you like?')
+f.close()
+
+print("file fruits.txt has been created")
+
+print("Reading the file fruits.txt ...")
+
+f = open('fruits.txt', 'r')
+line = f.readline()
+while line:
+    print(line.strip())
+    line = f.readline()
+f.close()
